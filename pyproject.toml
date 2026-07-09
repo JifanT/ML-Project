@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ML-project"
+version = "0.1.0"
+description = "Machine Learning Project Package"
+readme = "README.md"
+requires-python = ">=3.10"
+dynamic = ["dependencies"]
+
+[[project.authors]]
+name = "Jifan Thottungal"
+email = "jifan2185@gmail.com"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
